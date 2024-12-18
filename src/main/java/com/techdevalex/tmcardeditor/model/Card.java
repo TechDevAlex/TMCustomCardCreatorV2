@@ -1,5 +1,7 @@
 package com.techdevalex.tmcardeditor.model;
 
+
+
 public class Card {
     String name;
     
