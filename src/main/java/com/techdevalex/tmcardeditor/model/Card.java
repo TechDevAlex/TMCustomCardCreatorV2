@@ -41,10 +41,26 @@ public class Card {
     List<String> requirements;
     @Embedded Metadata metadata;
     @Embedded ProductionBox productionBox;
+    @ElementCollection
+    List<String> compatibility;
+    @Column
+    String sourceFile;
+    // Storing the sourcecode in a separate table
+    @Column
+    String sourceCode;
     
 
     public Card() {
         // empty constructor
+    }
+
+    public Card(String module, String name){
+        this.module = module;
+        this.name = name;
+    }
+
+    public String getModule(){
+        return this.module;
     }
 
     public String getName() {
@@ -55,12 +71,37 @@ public class Card {
         return this.id;
     }
 
+
+    public void setModule(String module){
+        this.module = module;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public List<String> getCompatibility() {
+        return compatibility;
+    }
+    
+    public void setCompatibility(List<String> compatibility) {
+        this.compatibility = compatibility;
+    }
+    
+    public String getSourceFile() {
+        return sourceFile;
+    }
+    
+    public void setSourceFile(String sourceFile) {
+        this.sourceFile = sourceFile;
+    }
+    
+    public String getSourceCode() {
+        return sourceCode;
+    }
+    
+    public void setSourceCode(String sourceCode) {
+        this.sourceCode = sourceCode;
     }
 }
 
