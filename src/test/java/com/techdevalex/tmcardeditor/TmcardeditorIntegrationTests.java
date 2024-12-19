@@ -32,5 +32,9 @@ class TmcardeditorIntegrationTests {
         assertEquals(1, result);
     }
 
+    @Test
+    void testCardCreationAndDeletion(){
+        
+    }
 
 }
