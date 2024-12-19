@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Card {
     // annotate the Id as being the primary key for hibernate
     @Id
-    // let hibernate generate the id, not sure how this works exactly
+    // let hibernate generate the id, not sure how this works exactly, if a card without Id is saved to the DB, hibernate creates the Id and also assigns it to the object
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

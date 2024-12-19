@@ -1,11 +1,18 @@
 package com.techdevalex.tmcardeditor;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.techdevalex.tmcardeditor.model.Card;
+import com.techdevalex.tmcardeditor.repository.CardRepository;
+
 
 
     
@@ -32,9 +39,24 @@ class TmcardeditorIntegrationTests {
         assertEquals(1, result);
     }
 
+    // inject an instance of CardRepository into the Spring context
+    @Autowired
+    CardRepository cardRepository;
+
     @Test
-    void testCardCreationAndDeletion(){
-        
+    void createCardAndDeleteTheCard(){
+        Card card = new Card();
+        card.setName("Test Card");
+        Card saveResult = cardRepository.save(card);
+        assertEquals(card, saveResult);
+        // Optional type used because the search result may contain null, the object needs to be retreived before Card class methods can be called
+        // delete the card to clean up the test
+        Optional <Card> searchedCard = cardRepository.findById(card.getId());
+        assertEquals(card.getName(), searchedCard.get().getName());
+        cardRepository.delete(card);
+        assertEquals(false, cardRepository.existsById(card.getId()));
+
     }
 
+        
 }
