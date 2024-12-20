@@ -29,10 +29,18 @@ public class Controller {
     }
 
     // A handler to create a card from the body of an http request
-    @PostMapping("/cards")
+    @PostMapping("/card")
     public Card createCard(@RequestBody Card card) {
         cardService.saveCard(card);
         return card;
+    }
+    @PostMapping("/cards")
+    public List<Card> createCards(@RequestBody List<Card> cards) {
+        for (Card card : cards) {
+            cardService.saveCard(card);
+            
+        }
+        return cards;
     }
 
     // // 
