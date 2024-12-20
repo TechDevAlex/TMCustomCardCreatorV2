@@ -2,6 +2,8 @@ package com.techdevalex.tmcardeditor.model;
 
 import java.util.List;
 
+import org.aspectj.apache.bcel.classfile.Module.Require;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embedded;
@@ -37,8 +39,6 @@ public class Card {
     int cost;
     @Column
     String type;
-    @ElementCollection
-    List<String> requirements;
     @Embedded Metadata metadata;
     @Embedded ProductionBox productionBox;
     @ElementCollection
