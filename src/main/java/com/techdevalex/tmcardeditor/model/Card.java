@@ -53,6 +53,9 @@ public class Card {
     public Card() {
         // empty constructor
     }
+    public Long getId() {
+        return this.id;
+    }
 
     public Card(String module, String name){
         this.module = module;
@@ -67,9 +70,22 @@ public class Card {
         return this.name;
     }
 
-    public Long getId() {
-        return this.id;
+    public List<String> getTags(){
+        return this.tags;
     }
+
+    public int getCost(){
+        return this.cost;
+    }
+
+    public String getType(){
+        return this.type;
+    }
+
+    public String getSourceCode(){
+        return this.sourceCode;
+    }
+
 
 
     public void setModule(String module){
@@ -80,24 +96,34 @@ public class Card {
         this.name = name;
     }
 
+    public void setTags(List<String> tags){
+        this.tags = tags;
+    }
+
+    public void setCost(int cost){
+        this.cost = cost;
+    }
+
+    public void setType(String type){
+        this.type = type;
+    }
+
+    public String getSourceFile() {
+        return this.sourceFile;
+    }
+
     public List<String> getCompatibility() {
-        return compatibility;
+        return this.compatibility;
     }
     
     public void setCompatibility(List<String> compatibility) {
         this.compatibility = compatibility;
     }
     
-    public String getSourceFile() {
-        return sourceFile;
-    }
+    
     
     public void setSourceFile(String sourceFile) {
         this.sourceFile = sourceFile;
-    }
-    
-    public String getSourceCode() {
-        return sourceCode;
     }
     
     public void setSourceCode(String sourceCode) {

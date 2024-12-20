@@ -22,7 +22,7 @@ public class Metadata {
 
     // Getters and setters...
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -30,7 +30,7 @@ public class Metadata {
     }
 
     public String getCardNumber() {
-        return cardNumber;
+        return this.cardNumber;
     }
 
     public void setCardNumber(String cardNumber) {
@@ -38,7 +38,7 @@ public class Metadata {
     }
 
     public int getVictoryPoints() {
-        return victoryPoints;
+        return this.victoryPoints;
     }
 
     public void setVictoryPoints(int victoryPoints) {
@@ -46,7 +46,7 @@ public class Metadata {
     }
 
     public RenderData getRenderData() {
-        return renderData;
+        return this.renderData;
     }
 
     public void setRenderData(RenderData renderData) {
@@ -60,7 +60,7 @@ public class Metadata {
 
         // Getters and setters...
         public List<Row> getRows() {
-            return rows;
+            return this.rows;
         }
 
         public void setRows(List<Row> rows) {
@@ -74,7 +74,7 @@ public class Metadata {
 
             // Getters and setters...
             public List<Item> getRows() {
-                return rows;
+                return this.rows;
             }
 
             public void setRows(List<Item> rows) {
@@ -113,7 +113,7 @@ public class Metadata {
 
                 // Getters and setters...
                 public String getType() {
-                    return type;
+                    return this.type;
                 }
 
                 public void setType(String type) {
@@ -121,7 +121,7 @@ public class Metadata {
                 }
 
                 public int getAmount() {
-                    return amount;
+                    return this.amount;
                 }
 
                 public void setAmount(int amount) {
@@ -129,7 +129,7 @@ public class Metadata {
                 }
 
                 public boolean isItem() {
-                    return isItem;
+                    return this.isItem;
                 }
 
                 public void setItem(boolean isItem) {
@@ -137,7 +137,7 @@ public class Metadata {
                 }
 
                 public String getText() {
-                    return text;
+                    return this.text;
                 }
 
                 public void setText(String text) {
@@ -145,7 +145,7 @@ public class Metadata {
                 }
 
                 public boolean isPlate() {
-                    return isPlate;
+                    return this.isPlate;
                 }
 
                 public void setPlate(boolean isPlate) {
@@ -153,7 +153,7 @@ public class Metadata {
                 }
 
                 public boolean isBold() {
-                    return isBold;
+                    return this.isBold;
                 }
 
                 public void setBold(boolean isBold) {
@@ -161,7 +161,7 @@ public class Metadata {
                 }
 
                 public String getSize() {
-                    return size;
+                    return this.size;
                 }
 
                 public void setSize(String size) {
@@ -169,7 +169,7 @@ public class Metadata {
                 }
 
                 public boolean isIcon() {
-                    return isIcon;
+                    return this.isIcon;
                 }
 
                 public void setIcon(boolean isIcon) {
@@ -177,7 +177,7 @@ public class Metadata {
                 }
 
                 public boolean isSuperscript() {
-                    return isSuperscript;
+                    return this.isSuperscript;
                 }
 
                 public void setSuperscript(boolean isSuperscript) {

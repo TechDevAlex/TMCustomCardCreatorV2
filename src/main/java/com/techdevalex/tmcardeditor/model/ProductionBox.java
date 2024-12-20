@@ -13,7 +13,7 @@ public class ProductionBox {
     private int heat;
 
     public int getMegacredits() {
-        return megacredits;
+        return this.megacredits;
     }
 
     public void setMegacredits(int megacredits) {
@@ -21,7 +21,7 @@ public class ProductionBox {
     }
 
     public int getSteel() {
-        return steel;
+        return this.steel;
     }
 
     public void setSteel(int steel) {
@@ -29,7 +29,7 @@ public class ProductionBox {
     }
 
     public int getTitanium() {
-        return titanium;
+        return this.titanium;
     }
 
     public void setTitanium(int titanium) {
@@ -37,7 +37,7 @@ public class ProductionBox {
     }
 
     public int getPlants() {
-        return plants;
+        return this.plants;
     }
 
     public void setPlants(int plants) {
@@ -45,7 +45,7 @@ public class ProductionBox {
     }
 
     public int getEnergy() {
-        return energy;
+        return this.energy;
     }
 
     public void setEnergy(int energy) {
@@ -53,7 +53,7 @@ public class ProductionBox {
     }
 
     public int getHeat() {
-        return heat;
+        return this.heat;
     }
 
     public void setHeat(int heat) {
