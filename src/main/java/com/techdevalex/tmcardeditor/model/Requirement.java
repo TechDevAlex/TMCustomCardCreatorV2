@@ -23,7 +23,7 @@ public class Requirement {
     Integer tr;
     Integer venus;
     Integer floaters;
-    Integer plantsRemoved;
+    Boolean plantsRemoved;
     Integer cities;
     Integer colonies;
     String nextTo;
@@ -36,10 +36,10 @@ public class Requirement {
     Integer miningTiles;
     Integer logisticRate;
     Integer roadTiles;
-    Integer production;
-    Boolean excavation;
+    String production;
+    Integer excavation;
     Boolean chairman;
-    Boolean corruption;
+    Integer corruption;
     Integer greeneries;
 
     public Requirement() {
@@ -142,11 +142,11 @@ public class Requirement {
         this.floaters = floaters;
     }
 
-    public Integer getPlantsRemoved() {
+    public Boolean getPlantsRemoved() {
         return this.plantsRemoved;
     }
 
-    public void setPlantsRemoved(Integer plantsRemoved) {
+    public void setPlantsRemoved(Boolean plantsRemoved) {
         this.plantsRemoved = plantsRemoved;
     }
 
@@ -246,19 +246,19 @@ public class Requirement {
         this.roadTiles = roadTiles;
     }
 
-    public Integer getProduction() {
+    public String getProduction() {
         return this.production;
     }
 
-    public void setProduction(Integer production) {
+    public void setProduction(String production) {
         this.production = production;
     }
 
-    public Boolean getExcavation() {
+    public Integer getExcavation() {
         return this.excavation;
     }
 
-    public void setExcavation(Boolean excavation) {
+    public void setExcavation(Integer excavation) {
         this.excavation = excavation;
     }
 
@@ -270,11 +270,11 @@ public class Requirement {
         this.chairman = chairman;
     }
 
-    public Boolean getCorruption() {
+    public Integer getCorruption() {
         return this.corruption;
     }
 
-    public void setCorruption(Boolean corruption) {
+    public void setCorruption(Integer corruption) {
         this.corruption = corruption;
     }
 

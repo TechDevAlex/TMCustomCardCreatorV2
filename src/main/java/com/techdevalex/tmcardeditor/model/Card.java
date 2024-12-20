@@ -67,6 +67,10 @@ public class Card {
         return this.id;
     }
 
+    public void setId(Long id){
+        this.id = id;
+    }
+
     public Card(String module, String name){
         this.module = module;
         this.name = name;
