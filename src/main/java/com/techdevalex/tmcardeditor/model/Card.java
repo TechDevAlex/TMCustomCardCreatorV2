@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 
 // declare card as an Entity for hibernate to manage
@@ -43,8 +44,8 @@ public class Card {
     List<String> compatibility;
     @Column
     String sourceFile;
-    // Storing the sourcecode in a separate table
-    @Column
+    @Column(columnDefinition = "TEXT")
+    @Lob
     String sourceCode;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
