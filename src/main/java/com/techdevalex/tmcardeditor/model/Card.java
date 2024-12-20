@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.aspectj.apache.bcel.classfile.Module.Require;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embedded;
@@ -11,6 +12,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 
 // declare card as an Entity for hibernate to manage
 @Entity
@@ -48,7 +51,18 @@ public class Card {
     // Storing the sourcecode in a separate table
     @Column
     String sourceCode;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "card_id")
+    List<Requirement>requirements;
     
+    public List<Requirement> getRequirements(){
+        return this.requirements;
+    }
+
+    public void setRequirements(List<Requirement> requirements){
+        this.requirements = requirements;
+    }
 
     public Card() {
         // empty constructor
