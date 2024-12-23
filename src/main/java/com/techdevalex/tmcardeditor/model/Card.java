@@ -48,6 +48,8 @@ public class Card {
     @Lob
     String sourceCode;
 
+    // annotation helps handle ex. removal of parent (card) -> associated requirements are also removed
+    // orphan removal handles removing the requirement if just the association is removed
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "card_id")
     List<Requirement>requirements;

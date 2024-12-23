@@ -16,4 +16,4 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname="$POSTGRES_DB" <<-E
         name VARCHAR(100) NOT NULL,
         description TEXT
     );
-EOSQL
+    EOSQL
